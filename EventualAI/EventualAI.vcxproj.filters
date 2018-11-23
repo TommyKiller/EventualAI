@@ -13,5 +13,51 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Identity">
+      <UniqueIdentifier>{d9e063d2-b3e1-4a3b-90d2-5d0717f2343a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Actors">
+      <UniqueIdentifier>{07ba2a1b-a913-4f85-a2c0-0224d4313913}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Actors">
+      <UniqueIdentifier>{206608a5-ff74-46fa-bc3a-cf729ed0d89a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Identity">
+      <UniqueIdentifier>{b8aed782-35bc-4150-bf39-ddf313b19909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Events">
+      <UniqueIdentifier>{45710fe8-a4e4-4342-8a39-0c952bc1b52f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterID.cpp">
+      <Filter>Исходные файлы\Identity</Filter>
+    </ClCompile>
+    <ClCompile Include="ID.cpp">
+      <Filter>Исходные файлы\Identity</Filter>
+    </ClCompile>
+    <ClCompile Include="IDManager.cpp">
+      <Filter>Исходные файлы\Identity</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Event.h">
+      <Filter>Файлы заголовков\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Delegate.h">
+      <Filter>Файлы заголовков\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterID.h">
+      <Filter>Файлы заголовков\Identity</Filter>
+    </ClInclude>
+    <ClInclude Include="ID.h">
+      <Filter>Файлы заголовков\Identity</Filter>
+    </ClInclude>
+    <ClInclude Include="IDManager.h">
+      <Filter>Файлы заголовков\Identity</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

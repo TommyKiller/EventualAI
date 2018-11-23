@@ -115,6 +115,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CharacterID.cpp" />
+    <ClCompile Include="ID.cpp" />
+    <ClCompile Include="IDManager.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CharacterID.h" />
+    <ClInclude Include="Delegate.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="ID.h" />
+    <ClInclude Include="IDManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
