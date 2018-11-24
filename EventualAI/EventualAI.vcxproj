@@ -69,14 +69,26 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)/../External Resources/GLEW/Include;$(SolutionDir)/../External Resources/GLFW/Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)/../External Resources/GLEW/Libraries/Release/Win32;$(SolutionDir)/../External Resources/GLFW/Libraries;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExecutablePath>$(SolutionDir)/../External Sources/GLEW/Include;$(SolutionDir)/../External Sources/GLFW/Include;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(SolutionDir)/../External Sources/GLEW/Libraries/Release/Win64;$(SolutionDir)/../External Sources/GLFW/Libraries;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SoultoinDir)/../External Resoures/GLFW/Include;$(SoultoinDir)/../External Resoures/GLEW/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SoultoinDir)/../External Resoures/GLEW/Libraries/Release/Win32;$(SoultoinDir)/../External Resoures/GLFW/Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -84,7 +96,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../External Sources/GLFW/Include;$(SolutionDir)/../External Sources/GLEW/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)/../External Sources/GLFW/Libraries;$(SolutionDir)/../External Sources/GLEW/Libraries/Release/Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -116,6 +133,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CharacterID.cpp" />
+    <ClCompile Include="glad.c" />
     <ClCompile Include="ID.cpp" />
     <ClCompile Include="IDManager.cpp" />
     <ClCompile Include="main.cpp" />

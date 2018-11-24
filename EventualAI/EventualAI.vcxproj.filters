@@ -42,6 +42,9 @@
     <ClCompile Include="IDManager.cpp">
       <Filter>Исходные файлы\Identity</Filter>
     </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Event.h">
