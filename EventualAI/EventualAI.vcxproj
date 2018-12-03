@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)/../External Resources/GLEW/Include;$(SolutionDir)/../External Resources/GLFW/Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)/../External Resources/GLEW/Libraries/Release/Win32;$(SolutionDir)/../External Resources/GLFW/Libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)/External Resources/GLEW/Include;$(SolutionDir)/External Resources/GLFW/Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)/External Resources/GLEW/Libraries/Release/Win32;$(SolutionDir)/External Resources/GLFW/Libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ExecutablePath>$(SolutionDir)/../External Sources/GLEW/Include;$(SolutionDir)/../External Sources/GLFW/Include;$(ExecutablePath)</ExecutablePath>
@@ -83,11 +83,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SoultoinDir)/../External Resoures/GLFW/Include;$(SoultoinDir)/../External Resoures/GLEW/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/External Resoures/GLFW/Include;$(SolutionDir)/External Resoures/GLEW/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SoultoinDir)/../External Resoures/GLEW/Libraries/Release/Win32;$(SoultoinDir)/../External Resoures/GLFW/Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/External Resoures/GLEW/Libraries/Release/Win32;$(SolutionDir)/External Resoures/GLFW/Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -133,7 +135,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CharacterID.cpp" />
-    <ClCompile Include="glad.c" />
+    <ClCompile Include="framework.cpp" />
     <ClCompile Include="ID.cpp" />
     <ClCompile Include="IDManager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -142,6 +144,7 @@
     <ClInclude Include="CharacterID.h" />
     <ClInclude Include="Delegate.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="framework.h" />
     <ClInclude Include="ID.h" />
     <ClInclude Include="IDManager.h" />
   </ItemGroup>

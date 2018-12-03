@@ -28,6 +28,12 @@
     <Filter Include="Файлы заголовков\Events">
       <UniqueIdentifier>{45710fe8-a4e4-4342-8a39-0c952bc1b52f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Graphics">
+      <UniqueIdentifier>{e6ccfccf-28d0-4736-8f67-9074553f6a41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Graphics">
+      <UniqueIdentifier>{37cd5a12-17a0-42c5-b3a1-2c2ed5274987}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -42,8 +48,8 @@
     <ClCompile Include="IDManager.cpp">
       <Filter>Исходные файлы\Identity</Filter>
     </ClCompile>
-    <ClCompile Include="glad.c">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="framework.cpp">
+      <Filter>Исходные файлы\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="IDManager.h">
       <Filter>Файлы заголовков\Identity</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Файлы заголовков\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
